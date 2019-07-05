@@ -1,4 +1,4 @@
-
+﻿
 // OpenCV_Helloworld
 
 #include "opencv2/core.hpp"
@@ -36,19 +36,19 @@ int main() {
 
 	// drei einkan�lige
 	split(image, splitImage);
-	
+
 	namedWindow("Image:");
 	namedWindow("Image1:");
-		namedWindow("Image2:");
-		
+	namedWindow("Image2:");
+
 	imshow("Image:", splitImage[0]);
 	imshow("Image1:", splitImage[1]);
 	imshow("Image2:", splitImage[2]);
-		/*
-	*/
+	/*
+*/
 
-		// write to different formats
-		imwrite("../../Daten/OpenCV-03/Img03a_grey0.jpg", splitImage[0]);
+// write to different formats
+	imwrite("../../Daten/OpenCV-03/Img03a_grey0.jpg", splitImage[0]);
 	imwrite("../../Daten/OpenCV-03/Img03a_grey1.tiff", splitImage[1]);
 	imwrite("../../Daten/OpenCV-03/Img03a_grey2.png", splitImage[2]);
 
@@ -76,7 +76,7 @@ int main() {
 	vector<Mat> spl;
 
 
-	for (int i = 0; i < framecount;i++)
+	for (int i = 0; i < framecount; i++)
 	{
 		Mat frame;
 		cap >> frame; // get a new frame from camera
