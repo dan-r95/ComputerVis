@@ -53,7 +53,7 @@ int main() {
 	imwrite("../../Daten/OpenCV-03/Img03a_grey2.png", splitImage[2]);
 
 	// video show
-	VideoCapture cap("../../Daten/Vid03a.mov"); // open the default camera
+	VideoCapture cap("../OpenCV-03/Daten/Vid03a.mov"); // open the default camera
 	double framecount = cap.get(CAP_PROP_FRAME_COUNT);
 	if (!cap.isOpened())  // check if we succeeded
 		return -1;
