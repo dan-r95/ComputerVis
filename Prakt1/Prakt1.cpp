@@ -11,7 +11,7 @@ using namespace cv; // um nicht cv::function schreiben zu m�ssen
 
 int main() {
 	Mat image;
-	image = imread("../../Daten/OpenCV-01/Img01a.jpg");
+	image = imread("../Daten/OpenCV-01/Img01a.jpg");
 	if (!image.data) {
 		printf("Error: Couldn't open the image file.\n");
 		return 1;
@@ -23,13 +23,13 @@ int main() {
 	waitKey(0);
 
 	//aufhellen --> multiplizieren, alle Kan�le!
-	for (int i = 0; i < 100; i++){
-		for (int j = 0; j < 100; j++){
+	for (int i = 0; i < 100; i++) {
+		for (int j = 0; j < 100; j++) {
 			//printf("%04x ", image.at<char>(i, j));
-			image.at<Vec3b>(i, j) = image.at<Vec3b>(i, j) *1.5 ;                            //bgr   
+			image.at<Vec3b>(i, j) = image.at<Vec3b>(i, j) *1.5;                            //bgr   
 		}
 	}
-	
+
 
 	////mittelwert zweier benachbarter pixel
 	//for (int i = 200; i < 450; i++){
@@ -57,7 +57,7 @@ int main() {
 	//}
 
 	namedWindow("Image:");
-	imshow("Image:", image); 
+	imshow("Image:", image);
 	waitKey(0);
 	destroyWindow("Image:");
 	return 0;

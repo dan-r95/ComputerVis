@@ -16,7 +16,7 @@ int main() {
 		printf("Error: Couldn't open the Img13a00 file.\n");
 		return 1;
 	}
-	
+
 	img = imread("../Daten/OpenCV-13/Img13a01.jpg");
 	if (!img.data) {
 		printf("Error: Couldn't open the Img13a01 file.\n");
@@ -25,7 +25,7 @@ int main() {
 
 	/// Do the Matching and Normalize
 	//matchTemplate(img, templ, result, CV_TM_SQDIFF_NORMED);
-	matchTemplate(img, templ, result, CV_TM_SQDIFF);
+	matchTemplate(img, templ, result, TM_SQDIFF_NORMED);
 	//Create a window
 	namedWindow("img1", 1);
 

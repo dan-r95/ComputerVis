@@ -1,7 +1,8 @@
 
 // OpenCV_Helloworld 
 
-#include <opencv.hpp>
+#include <opencv2/opencv.hpp>
+using namespace cv;
 
 int main() {
 	cv::Mat image;
@@ -11,7 +12,7 @@ int main() {
 		return 1;
 	}
 	cv::namedWindow("Image:");
-	cv::imshow("Image:", image); 
+	cv::imshow("Image:", image);
 	cv::waitKey(0);
 	cv::destroyWindow("Image:");
 	return 0;
