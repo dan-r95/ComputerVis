@@ -7,7 +7,7 @@ using namespace std;
 #include <stdlib.h>
 
 int main() {
-	cv::Mat src, gray, tmp, dst;
+	cv::Mat src, gray, tmp, dst, equalized;
 	src = cv::imread("../Daten/OpenCV-05/Img05a.jpg");
 	if (!src.data) {
 		printf("Error: Couldn't open the image file.\n");
@@ -34,13 +34,16 @@ int main() {
 	Mat histImage(hist_h, hist_w, CV_8UC1, Scalar(0, 0, 0));
 	normalize(hist, hist, 0, histImage.rows, NORM_MINMAX, -1, Mat());
 
+	/// Apply Histogram Equalization
+	equalizeHist(gray, equalized);
+
 	for (int i = 1; i < histSize; i++)
 	{
 		line(histImage, Point(bin_w*(i - 1), hist_h - cvRound(hist.at<float>(i - 1))),
 			Point(bin_w*(i), hist_h - cvRound(hist.at<float>(i))),
 			Scalar(255, 0, 0), 2, 8, 0);
 	}
-
+	/*
 	// Gauß-Pyramide & Laplace Pyramid
 	while (true)
 	{
@@ -67,11 +70,12 @@ int main() {
 		imshow("Test", dst);
 		tmp = dst;
 	}
-
+	*/
 	imshow("Test", dst);
 	imshow("Source", src);
 	imshow("Gray", gray);
-	imshow("Result", histImage);
+	imshow("Result", histImage); 
+	imshow("Equalized", equalized);
 	waitKey(0);
 	destroyAllWindows;
 	return 0;
