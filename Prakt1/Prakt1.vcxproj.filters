@@ -69,6 +69,15 @@
     <ClCompile Include="_solutionPrakt5b.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="_solution_prakt7.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="_solution_prakt8.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="_solution_prakt9.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_solutionPrakt12.h">

@@ -22,7 +22,8 @@ static void CannyThreshold(int, void*)
 	// end canny edge
 
 	 // Edge detection
-	Canny(src, dst, 50, 200, 3);
+	Canny(src, dst, lowThreshold, 200, 3);
+	imshow(window_name, dst);
 	 // Copy edges to the images that will display the results in BGR
 	cvtColor(dst, colorDst, COLOR_GRAY2BGR);
 	cdstP = colorDst.clone();
